@@ -1,3 +1,5 @@
+NB! Changes in this code were made to 15.3.0 sdk example called ble_app_uart, since the project doesn't meet the end requirements, please copy main.c to that example and see my changes.
+
 Sending coordinates to board should be done over serial connection (can use Putty for that). Set correct port, baud rate: 115200, data bits: 8, stop bits: 1, parity: none, flow control: none.
 
 UART data structure should be encoded and then pointer to encoded (ble_advdata_encode) data and previous advertising data should be provided to sd_ble_gap_adv_set_configure function, but unfortunately this pointer based solution was too difficult to understand for me.
