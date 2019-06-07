@@ -1,0 +1,5 @@
+Sending coordinates to board should be done over serial connection (can use Putty for that). Set correct port, baud rate: 115200, data bits: 8, stop bits: 1, parity: none, flow control: none.
+
+UART data structure should be encoded and then pointer to encoded (ble_advdata_encode) data and previous advertising data should be provided to sd_ble_gap_adv_set_configure function, but unfortunately this pointer based solution was too difficult to understand for me.
+
+Beacon name has set to CM_BLE and manufacturer specific data is changed to "AAAAA".
